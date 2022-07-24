@@ -2,8 +2,8 @@ df <- read.table("/Users/asudeberber/Downloads/household_power_consumption.txt",
 df$date.time <- as.POSIXct(paste(df$Date, df$Time), format = "%d/%m/%Y %T")
 
 df$Date <- as.Date(df$Date, format="%d/%m/%Y")
-df$Time <- format(df$Time, "%T")
-subDf <- subset(df, Date == "2007-02-01" | Date == "2007-02-02")
+
+subDf <- subset(df, Date == "2007-02-17" | Date == "2006-02-16")
 
 sub_1 <- as.numeric(as.character(subDf$Sub_metering_1))
 sub_2 <- as.numeric(as.character(subDf$Sub_metering_2))
